@@ -1,0 +1,24 @@
+name: Java Pipeline
+
+on:
+ push:
+   branches: [main]
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+
+   steps:
+   - uses: actions/checkout@v4
+
+   - name: Setup Java
+     uses: actions/setup-java@v4
+     with:
+       java-version: '17'
+       distribution: 'temurin'
+
+   - name: Compile Java
+     run: javac Hello.java
+
+   - name: Run App
+     run: java Hello
