@@ -3,23 +3,14 @@ pipeline {
 
  stages {
 
-  stage('build') {
-   steps{
-    echo'Building Application...'
+   stage('Info') {
+      steps {
+         echo 'My First Groovy Pipeline'
+         sh 'date'
+         sh 'pwd'
+      }
    }
-  }
 
-  stage('Test') {
-   steps {
-    echo'Testing Application..'
-
-   }
-  }
-
-  stage('Deploy') {
-   steps {
-    echo'Deploying Application..'
-   }
-  }
  }
+
 }
