@@ -19,3 +19,6 @@ jobs:
 
       - name: Run App
         run: python app.py
+
+      - name: Deploy to Server
+        run: echo "Application Deployed"
